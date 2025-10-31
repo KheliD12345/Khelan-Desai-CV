@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Khelan Desai — CV</title>
+  <meta name="description" content="Curriculum Vitae of Khelan Desai" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --accent: #0f766e;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #e2f3f1 0%, #f3f4f6 42%, #f3f4f6 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 32px auto;
+      padding: 0 16px 48px;
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: rgba(255, 255, 255, .7);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(15, 118, 110, .08);
+      border-radius: 18px;
+      padding: 24px 20px 26px;
+      box-shadow: 0 18px 40px rgba(15, 118, 110, .08);
+      height: fit-content;
+      position: sticky;
+      top: 20px;
+    }
+
+    .name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: 2px;
+    }
+
+    .role {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 0.8rem;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-block;
+      background: rgba(15,118,110,.08);
+      color: #0f766e;
+      font-size: 0.65rem;
+      padding: 2px 9px 3px;
+      border-radius: 999px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      border: 1px solid rgba(15,118,110,.12);
+    }
+
+    .sidebar h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #374151;
+      margin: 16px 0 9px;
+    }
+
+    /* Main area */
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid rgba(229, 231, 235, .8);
+      border-radius: 18px;
+      padding: 18px 22px 20px;
+      box-shadow: 0 12px 28px rgba(148, 163, 184, .07);
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #111827;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 7px;
+      height: 20px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #0f766e 0%, #14b8a6 100%);
+      display: inline-block;
+    }
+
+    p {
+      margin: 0 0 8px;
+      font-size: 0.82rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      font-size: 0.8rem;
+    }
+
+    .edu-item {
+      margin-bottom: 10px;
+    }
+
+    .inline-badge {
+      background: rgba(15,118,110,.1);
+      padding: 1px 6px 2px;
+      border-radius: 999px;
+      font-size: 0.67rem;
+      font-weight: 500;
+      margin-left: 6px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 14px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .taglist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* Small SVG icon (kept readable) */
+    .icon {
+      inline-size: 16px;
+      block-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .sidebar-block {
+        flex: 1 1 0;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .section { padding: 16px 14px; }
+      .two-col { grid-template-columns: 1fr; }
+      body { background: #f3f4f6; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- LEFT / PROFILE -->
+    <aside class="sidebar">
+      <div class="sidebar-block">
+        <div class="name">Khelan Desai</div>
+        <div class="role">Electrical & Information Engineering Student</div>
+      </div>
+
+      <div class="contact">
+        <a href="tel:+27832110862">
+          <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none">
+            <path d="M3 5c0 8.284 6.716 15 15 15h1.5a1.5 1.5 0 0 0 1.5-1.5v-2.3a1 1 0 0 0-.77-.97l-3.35-.74a1 1 0 0 0-1 .3l-.86.95a1 1 0 0 1-1.04.28 11.19 11.19 0 0 1-6.3-6.3 1 1 0 0 1 .28-1.04l.95-.86a1 1 0 0 0 .3-1L7.77 3.78A1 1 0 0 0 6.8 3H4.5A1.5 1.5 0 0 0 3 4.5V5z"/>
+          </svg>
+          (+27) 83 211 0862
+        </a>
+        <a href="mailto:khelan1412@gmail.com">
+          <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none">
+            <path d="M4 6h16v12H4z"/><path d="m4 6 8 7 8-7"/>
+          </svg>
+          khelan1412@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/khelan-desai-077bb7270/" target="_blank" rel="noreferrer">
+          <svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none">
+            <path d="M6 9v9"/><circle cx="6" cy="5" r="1"/><path d="M10 18v-5a3 3 0 0 1 6 0v5"/>
+          </svg>
+          LinkedIn Profile
+        </a>
+      </div>
+
+      <h3>Languages</h3>
+      <div class="taglist">
+        <span class="pill">English (fluent)</span>
+        <span class="pill">Afrikaans</span>
+        <span class="pill">Gujarati</span>
+      </div>
+
+      <h3>Core Tools</h3>
+      <div class="taglist">
+        <span class="pill">Java</span>
+        <span class="pill">C++</span>
+        <span class="pill">SQL</span>
+        <span class="pill">MS Office</span>
+      </div>
+
+      <h3>Highlights</h3>
+      <p class="muted" style="font-size:.72rem;">• Wits Vice-Chancellor’s Scholarship<br>• IEB Outstanding Achiever (2022)<br>• National English Olympiad Winner (2022)</p>
+    </aside>
+
+    <!-- RIGHT / CONTENT -->
+    <main>
+      <section class="section">
+        <div class="section-title">Personal Statement</div>
+        <p>I am a multicultural student at the University of the Witwatersrand, committed to achieving excellence in all my endeavours. My dedication extends to both my academic studies and personal interests. Furthermore, I pride myself on being approachable and engaging, with a keen interest in collaborating, instructing, and interacting with peers and colleagues.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-title">University Education</div>
+        <p class="edu-item"><strong>Electrical and Information Engineering (EIE)</strong>, University of the Witwatersrand <span class="inline-badge">Vice-Chancellor’s Scholarship</span></p>
+        <p><b>First Year:</b> CHEM1051A – 80%, FEBE1000A – 84%, FEBE1002A – 68%, FEBE1004A – 87%, INTR1012A – 80%, MATH1042A – 92%, MATH1043A – 80%, PHYS1032A – 84%, PHYS1033A – 76%, PHYS1034A – 84%</p>
+        <p><b>Second Year:</b> COMS2004A – 86%, ELEN2003A – 77%, ELEN2005A – 75%, ELEN2016A – 75%, ELEN2017A – 94%, ELEN2020A – 85%, ELEN2021A – 75%, MATH2014A – 66%, PHYS2007A – 78%</p>
+      </section>
+
+      <section class="section">
+        <div class="section-title">High School Education</div>
+        <p>St John’s College</p>
+        <div class="two-col">
+          <ul>
+            <li>English Home Language – 94%</li>
+            <li>Afrikaans FAL – 87%</li>
+            <li>Mathematics – 99%</li>
+            <li>Physical Science – 93%</li>
+            <li>Life Sciences – 88%</li>
+          </ul>
+          <ul>
+            <li>Life Orientation – 96%</li>
+            <li>Information Technology – 94%</li>
+            <li>Further Studies Mathematics – 92%</li>
+            <li><strong>Overall average – 92.88%</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Volunteer Experience</div>
+        <ul>
+          <li>67 hours community service at various organisations since 2018.</li>
+          <li>15 hours volunteer work with Dr Nadia Kana at her medical facility.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Awards & External Examination Results</div>
+        <ul>
+          <li>Two-time world-finalist and winner of the 2017 International Kids Lit Quiz</li>
+          <li>First Aid Level 2 accreditation (2018)</li>
+          <li>Academic Honours (2022)</li>
+          <li>Winner of the 2022 National English Olympiad</li>
+          <li>IEB Outstanding Achiever (2022)</li>
+          <li>Recipient of the Old Johannian Award for National Representation (2022)</li>
+          <li>Recipient of the Wits Vice-Chancellor’s Scholarship</li>
+          <li>89% NBT score</li>
+          <li>1550 SAT score (Ranked within the 1st percentile globally)</li>
+          <li>GROW@BCG 2024 Runners-Up</li>
+          <li>McKinsey Immersion Bootcamp 2024 Runners-Up</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Relevant Extracurricular Experience</div>
+        <ul>
+          <li>3-day Wilderness Leadership School (2021)</li>
+          <li>2nd Team Chess Captain (2022)</li>
+          <li>Head of House Academic Portfolio (2022)</li>
+          <li>Member of Wits Squash Club (2024)</li>
+          <li>1st Year Student Mentor (2024)</li>
+          <li>Participant in the 6-week long GROW@BCG Case Competition (2024)</li>
+          <li>Participant in the 3-day long McKinsey Immersion Bootcamp (2024)</li>
+          <li>Team Applied Heat Pit Safety Manager (2025)</li>
+          <li>Member of MENSA South Africa (Current)</li>
+          <li>Member of The Golden Key Society (Current)</li>
+          <li>Member of WISOC (Current)</li>
+          <li>Member of WMUC (Current)</li>
+          <li>Member of WHSS (Current)</li>
+          <li>Member of Anura Partners Accelerate Program (Current)</li>
+          <li>Private Tutor (Current)</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Skills</div>
+        <div class="two-col">
+          <ul>
+            <li>Fluent in English</li>
+            <li>Competent in Afrikaans and Gujarati</li>
+            <li>Proficiency in Java, C++, SQL</li>
+            <li>Proficiency in Microsoft Word, PowerPoint, Excel and Access</li>
+          </ul>
+          <ul>
+            <li>Effective communicator and team worker</li>
+            <li>Keen problem-solver</li>
+            <li>Highly adaptable and quick learner</li>
+            <li>Strong work ethic</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Hobbies</div>
+        <div class="taglist">
+          <span class="pill">Reading</span>
+          <span class="pill">Chess</span>
+          <span class="pill">Lego builder</span>
+          <span class="pill">Amateur eSports</span>
+          <span class="pill">Rock climbing</span>
+          <span class="pill">Squash</span>
+          <span class="pill">Padel</span>
+          <span class="pill">Stock & option trading</span>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
